@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Classes</title>
+</head>
+<body>
+
+
+
+<script>
+
+class Car {
+
+constructor(givenBrand){
+
+this.brand = givenBrand
+
+}
+myFunc = () => { return  ` I have a, ` + this.brand  }
+
+
+}
+
+
+let myCar = new Car( "Ford" );
+document.write(myCar.myFunc());
+document.write("<br><hr>")
+
+
+class Model extends Car{
+
+constructor(givenBrand,givenModel){
+
+super(givenBrand)    
+
+this.brand = givenBrand;
+this.model = givenModel
+
+}
+
+myFunc = () => { return `I have a `+  this.brand  + `, it is a ` + this.model + ` , ` };
+
+Condition = () => {
+ 
+ return  this.model == ("Mustang") ?   "This model is Super":" This model is good "
+ 
+ 
+ }
+ 
+
+
+}
+
+
+let myCar2 = new Model("Ford","Mustang");
+document.write(myCar2.myFunc() );
+document.write(myCar2.Condition())
+
+
+
+</script>
+    
+    
+</body>
+</html>
